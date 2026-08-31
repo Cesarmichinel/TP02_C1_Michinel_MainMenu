@@ -1,15 +1,12 @@
 using UnityEngine;
 
-public class MovementWASD : MonoBehaviour
+public class Movementplayer1 : MonoBehaviour
 {
-    public float speed = 4f;
-    public float rotationAngle = 8f;
-
-    private SpriteRenderer SpriteRenderer;
+    public float speed = 1f;
 
     void Start()
     {
-        SpriteRenderer = GetComponent<SpriteRenderer>();
+       
     }
 
 
@@ -32,21 +29,6 @@ public class MovementWASD : MonoBehaviour
             transform.Translate(Vector3.right * speed * Time.deltaTime);
         }
 
-
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            transform.Rotate(0f, 0f, rotationAngle);
-        }
-
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            transform.Rotate(0f, 0f, -rotationAngle);
-        }
-
-        if (Input.GetKeyUp(KeyCode.R))
-        {
-            SpriteRenderer.color = new Color(Random.value, Random.value, Random.value);
-        }
     }
 }
 
