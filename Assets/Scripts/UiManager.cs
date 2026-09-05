@@ -32,6 +32,7 @@ public class UiManager : MonoBehaviour
 
     private void Start()
     {
+        previousPanel = mainMenu;
 
         gameContainer.SetActive(false);
         panelSettings.SetActive(false);
