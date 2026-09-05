@@ -1,15 +1,12 @@
 using UnityEngine;
 
-public class MovementArrows : MonoBehaviour
+public class Movementplayer2 : MonoBehaviour
 {
-    public float speed = 2f;
-    public float rotationAngle = 5f;
-
-    private SpriteRenderer SpriteRenderer;
+    public float speed = 1f;
 
     void Start()
     {
-        SpriteRenderer = GetComponent<SpriteRenderer>();
+       
     }
 
 
@@ -30,22 +27,6 @@ public class MovementArrows : MonoBehaviour
         if (Input.GetKey(KeyCode.RightArrow))
         {
             transform.Translate(Vector3.right * speed * Time.deltaTime);
-        }
-
-
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            transform.Rotate(0f, 0f, rotationAngle);
-        }
-
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            transform.Rotate(0f, 0f, -rotationAngle);
-        }
-
-        if (Input.GetKeyUp(KeyCode.F))
-        {
-            SpriteRenderer.color = new Color(Random.value, Random.value, Random.value);
         }
     }
 }
